@@ -1,0 +1,15 @@
+[project]
+name = "reciprocal-matching"
+version = "0.1.0"
+description = "Reciprocal matching test stand: recall -> ranking -> post-processing on top of PostgreSQL"
+requires-python = ">=3.11"
+dependencies = [
+  "psycopg[binary]>=3.2",
+  "snowballstemmer>=2.2",
+]
+
+[project.optional-dependencies]
+dense = ["sentence-transformers>=3.0"]
+
+[tool.setuptools]
+packages = ["stand"]
